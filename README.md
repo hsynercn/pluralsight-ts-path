@@ -1,2 +1,2 @@
-# pluralsight-serverless-applications-on-aws-path
+# pluralsight-ts-path
 Notes
