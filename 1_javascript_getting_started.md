@@ -120,5 +120,104 @@ We can configure newly added JSON file for our project.
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   }
 }
-
 ```
+
+### 1.4. Writing TypeScript Applications
+
+**Explicit Types and Type Interface**
+
+Benefits of TypeScript
+- Static Types
+    - variables, parameters, return types, etc.
+- Organization
+    - classes, modules, namespaces, interfaces
+- Tooling
+    - static analysis, instant errors, detect unused/unreachable code, source maps, etc.
+
+**Static Types**
+
+variables.js
+```js
+let firstName = "Alice";
+let age = 72;
+let activeMember = true;
+
+firstName = 1; // OK in JavaScript
+```
+
+variables.ts
+```ts
+let firstName = "Alice";
+let age = 72;
+let activeMember = true;
+
+firstName = 1; // NOT OK in JavaScript
+```
+
+<ins>**Type Inference**</ins>
+
+variables.ts
+```ts
+let firstName = "Alice";    //inferred as a string
+let age = 72;               //inferred as a number
+let activeMember = true;    //inferred as a boolean
+let someVar;    //this type is any
+
+firstName = 123; //Type '123' is not assignable to type 'string'.
+```
+
+Type information in functions:
+```ts
+//TypeScript style function
+function simpleFunction(name: string, isActive: boolean): number {
+    return 0;
+}
+
+function simpleFunction(name: string, isActive: boolean): void {
+}
+```
+
+These small changes improve code quality. 
+
+**Defining TypeScript Classes**
+
+<ins>**Classes**</ins>
+
+```ts
+class Customer {
+    name: string;
+    isActive: boolean;
+
+    constructor(name: string) {
+        this.name = name;
+        this.isActive = false;
+    }
+
+    announce() {
+        return `Hello, my name is ${this.name}`;
+    }
+}
+```
+
+We don't need to use let or var for class properties. We can use inheritance with 'extends' keyword.
+
+Furthermore, we can use access modifiers **public, private, protected**.
+
+**By default, member of a ts class is PUBLIC.**
+
+**Working with Modules in TypeScript**
+
+TS uses ES2015 module import method. JS has multiple methods for module loading.
+
+```json
+{
+    "module": "es2015", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd',
+    'es2015', or 'ESNext' */
+}
+```
+
+In future JS will not need Ts.
+
+**TypeScript: Next Steps**
+
+We can get extra info from https://www.typescriptlang.org/docs/.
