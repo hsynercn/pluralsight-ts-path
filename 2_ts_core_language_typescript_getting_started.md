@@ -53,4 +53,7 @@ We can compile file with 'tsc app.ts' and go back to root project folder and sta
 
 We can initialize tsconfig.json with "tsc --init" command.
 
+**Non-Null Assertion Operator**: The post-fix expression operator ! may be used to assert that its operand cannot be null or undefined during runtime.
+
+We can add **watch** parameter to compile continuously
 
