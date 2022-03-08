@@ -117,5 +117,22 @@ and this package.json when we run **"npm start"** we compile ts files and webpac
 }
 ```
 
+### 2.2. Taking Advantage of Built-in Types
+
+**Overview**
+- Built-in TypeScript types
+- Declarations with **let** and **const**
+- Type annotations and type inference
+- Managing null and undefined
+- Control flow-based type analysis
+
+
+Basic TypeScript Types
+- Boolean
+- Number
+- String
+- Array
+- Enum
+
 
 
