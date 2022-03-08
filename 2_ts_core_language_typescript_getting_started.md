@@ -28,4 +28,29 @@ Overview
 
 **Demo: Project Overview**
 
-Install node and npm and install typescript
+Install node and npm and install typescript, "npm install -g typescript".
+
+Download template project.
+
+Run 'npm install'.
+
+```ts
+function startGame() {
+    var messagesElement = document.getElementById('messages');
+    messagesElement.innerText = 'Welcome th MultiMath! Starting new game...';
+}
+document.getElementById('startGame').addEventListener('click', startGame);
+```
+
+We can compile file with 'tsc app.ts' and go back to root project folder and start dev server with 'npm start'.
+
+
+**Using Project Files**
+- Simple JSON text file named tsconfig.json
+- Stores compiler options used with the project
+- Specifies files to be included or excluded in compilation
+- Supports configuration inheritance
+
+We can initialize tsconfig.json with "tsc --init" command.
+
+
