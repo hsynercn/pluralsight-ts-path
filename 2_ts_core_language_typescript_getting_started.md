@@ -117,7 +117,7 @@ and this package.json when we run **"npm start"** we compile ts files and webpac
 }
 ```
 
-### 2.2. Taking Advantage of Built-in Types
+### 2.3. Taking Advantage of Built-in Types
 
 **Overview**
 - Built-in TypeScript types
@@ -228,3 +228,49 @@ Summary
 - Reduce confusion and increase clarity
 - Reduce unintended consequences and increase stability
 - Maintain flexibility
+
+### 2.4. Writing Better Function with TypeScript
+
+Overview
+- Adding type annotations to functions
+- Using arrow functions
+- Declaring function types
+
+**Adding Type Annotations to Functions**
+
+```js
+function dullFunc(val1, val2) {
+  return "I'm boring and difficult, don't be like me."
+}
+```
+
+**Question Mark: Marks the parameter as optional.** In this example message is an optional parameter.
+
+```ts
+function funFunc(score: number, message?: string): string {
+  return "I am helpful, be lime me.";
+}
+```
+
+**--noImplicitAny Compiler Option**
+
+```ts
+function dullFunc(value1, value2) {
+  return "I am boring";
+}
+//error: Parameter 'value1' implicitly has an 'any' type
+//error: Parameter 'value2' implicitly has an 'any' type
+```
+
+**Default-Initialized Parameters**
+
+We can call this function without providing a parameter.
+
+```ts
+function sendGreeting(greeting: string = 'Good morning') {
+  console.log(greeting);
+}
+
+sendGreeting(); //prints 'Good morning'
+sendGreeting('Hello'); //prints 'Hello'
+```
