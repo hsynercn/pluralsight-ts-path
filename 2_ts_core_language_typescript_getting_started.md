@@ -469,5 +469,37 @@ import { Player } from "./player";
 import { Result } from "./result";
 ```
 
+**Static Members**
+
+Static members don't need an instance. 
+```ts
+class WebDeveloper extends Developer {
+  static jobDescription: string = 'Fabulous fuckery';
+  static logFavoriteProtocol() {
+    console.log('HTTPS, of course.');
+  }
+  logJobDescription(): void {
+    console.log(WebDeveloper.jobDescription);
+  }
+}
+//we can use static members like this
+WebDeveloper.logFavoriteProtocol();
+```
+**Constructors**
+
+```ts
+class Developer {
+  constructor() {
+    console.log('Creating a new developer.');
+  }
+}
+class WebDeveloper extends Developer {
+  readonly favoriteEditor: string;
+  constructor(editor: string) {
+    super();
+    this.favoriteEditor = editor;
+  }
+}
+```
 
 
