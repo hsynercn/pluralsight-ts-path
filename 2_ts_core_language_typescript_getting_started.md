@@ -461,6 +461,13 @@ class Engineer implements Employee {
 }
 ```
 
+We can import separated TS files like this and use exported classes from these files.
+
+```ts
+import { Person } from "./person";
+import { Player } from "./player";
+import { Result } from "./result";
+```
 
 
 

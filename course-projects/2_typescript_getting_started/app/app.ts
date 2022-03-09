@@ -1,4 +1,5 @@
 import { Person } from "./person";
+import { Player } from "./player";
 import { Result } from "./result";
 
 //staring a new game
@@ -48,7 +49,7 @@ document.getElementById('startGame')!.addEventListener('click', startGame);
 const logMessage = (message: string): void => console.log(message);
 
 function logError(err: string): void {
-    console.error(err);
+    //console.error(err);
 }
 
 let myResult: Result = {
@@ -62,3 +63,7 @@ let player: Person = {
     name: 'Jacobs',
     formatName: () => 'Jan'
 }
+
+const firstPlayer: Player = new Player();
+firstPlayer.name = 'Bob';
+console.log(firstPlayer.formatName());
