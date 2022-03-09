@@ -1,3 +1,6 @@
+import { Person } from "./person";
+import { Result } from "./result";
+
 //staring a new game
 function startGame() {
 
@@ -46,4 +49,16 @@ const logMessage = (message: string): void => console.log(message);
 
 function logError(err: string): void {
     console.error(err);
+}
+
+let myResult: Result = {
+    playerName: 'Marie',
+    score: 5,
+    problemCount: 5,
+    factor: 7
+};
+
+let player: Person = {
+    name: 'Jacobs',
+    formatName: () => 'Jan'
 }

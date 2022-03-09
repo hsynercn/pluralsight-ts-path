@@ -361,5 +361,106 @@ let developer = {
 
 let newEmployee: Employee = developer;
 ```
+**Demo: Creating Interfaces**
+
+```ts
+//result.ts
+export interface Result {
+    playerName: string;
+    score: number;
+    problemCount: number;
+    factor: number;
+}
+```
+
+```ts
+//person.ts
+export interface Person {
+    name: string;
+    age?: number;
+    formatName: () => string;
+}
+```
+age can be undefined. formatName implies method signature with string return.
+
+```ts
+//app.ts
+import { Person } from "./person";
+import { Result } from "./result";
+
+let myResult: Result = {
+    playerName: 'Marie',
+    score: 5,
+    problemCount: 5,
+    factor: 7
+};
+
+let player: Person = {
+    name: 'Jacobs',
+    formatName: () => 'Jan'
+}
+```
+
+**Class Members**
+- Method implementations
+- Property implementations
+- Accessors (getter and setters)
+- Access modifiers
+  - **Public**: By default all members of classes are public
+  - Private
+  - Protected
+
+```ts
+class Developer {
+  department: string;
+  private _title: string;
+  //getter and setter
+  get title(): string {
+    return this._title;
+  }
+  set title(newTitle: string) {
+    this._title = newTitle.toUpperCase();
+  }
+  documentRequirements(requirements: string): void {
+    console.log(requirements);
+  } 
+}
+```
+
+ECMAScript private fields are different from TypeScript private access modifier. TS modifiers run on compile time, we get standard class properties and during runtime we can access these class members Also, ECMAScript proposes # for private fields, these two modifiers don't have the same effect. Chose them by run environment.
+
+**Extending Classes and Implementing Interfaces**
+
+```ts
+class WebDeveloper extends Developer {
+  favoriteEditor: string;
+  writeEditor: string;
+  writeTypeScript(): void {
+    //some code
+  }
+}
+let webDev: WebDeveloper = new WebDeveloper();
+webDev.department = 'Software Engineering';
+webDev.favoriteEditor = 'VS Code';
+```
+
+Implementing an Interface
+
+```ts
+interface Employee {
+  name: string;
+  title: string;
+  logID: () => string;
+}
+class Engineer implements Employee {
+  name: string;
+  title: string;
+  logID() {
+    return `${this.name}_${this.title}`
+  }
+}
+```
+
+
 
 
