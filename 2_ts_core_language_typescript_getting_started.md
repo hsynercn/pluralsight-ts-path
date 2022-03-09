@@ -274,3 +274,4 @@ function sendGreeting(greeting: string = 'Good morning') {
 sendGreeting(); //prints 'Good morning'
 sendGreeting('Hello'); //prints 'Hello'
 ```
+
