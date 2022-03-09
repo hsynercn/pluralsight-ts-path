@@ -275,3 +275,42 @@ sendGreeting(); //prints 'Good morning'
 sendGreeting('Hello'); //prints 'Hello'
 ```
 
+**Anatomy of an Arrow Function**
+||||
+|--|--|--|
+||fat arrow||
+|parameters|=>|function body|
+
+If we use one parameter without type parenthesis are optional. 
+```js
+let squareIt = x => x * x;
+console.log(squareIt(4)); //16
+
+let adder = (a, b) => a + b;
+console.log(adder(2, 3)); //5
+
+let greeting = () => console.log('Hello World');
+greeting();//Hello World
+```
+
+```js
+let scores: number[] = [70, 125, 85, 110];
+let highScores: number[];
+highScores = scores.filter((element, index, array) => {
+  if(element > 100) {
+    return true;
+  }
+});
+```
+
+Usually we don't use return types for lambda functions. Also, we should declare commonly used functions as lambda too much.
+```ts
+const logMessage = (message: string): void => console.log(message);
+```
+
+Summary
+- TypeScript functions are easier to use
+- Flexibility included
+- Clean syntax
+
+
