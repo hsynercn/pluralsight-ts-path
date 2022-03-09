@@ -502,4 +502,22 @@ class WebDeveloper extends Developer {
 }
 ```
 
+**Declare class property and initialize its value with class constructor.**
+
+```ts
+import { Player } from "./player";
+import { ScoreBoard } from "./scoreboard";
+
+export class Game {
+    private scoreboard: ScoreBoard = new ScoreBoard();
+    constructor(public player: Player, public problemCount: number, public factor: number) {
+    }
+}
+```
+
+**Summary**
+- Interfaces and classes
+- Structural type system
+- Supporting multiple source files
+- Flexibility
 
