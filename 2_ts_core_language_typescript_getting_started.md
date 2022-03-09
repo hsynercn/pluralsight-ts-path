@@ -223,3 +223,8 @@ if(typeof messageElement === 'string') {
 }
 messageElement = document.getElementById('messages');
 ```
+
+Summary
+- Reduce confusion and increase clarity
+- Reduce unintended consequences and increase stability
+- Maintain flexibility
