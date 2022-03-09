@@ -313,4 +313,53 @@ Summary
 - Flexibility included
 - Clean syntax
 
+### 2.5. Creating and Using Custom Types
+
+Overview
+- Interfaces
+- Classes
+- Supporting multi-file projects
+
+|Interface|Class|
+|--|--|
+|Define a new type|Define a new type|
+|Properties (signatures)|Properties (with implementation)|
+|Methods (signatures)|Methods (with implementation)|
+|cannot be instantiated|Can be instantiated|
+
+**Creating an Interface**
+
+**INTERFACE DEFINE ONLY SHAPE OF AN OBJECT.**
+
+```ts
+interface Employee {
+  name: string;
+  title: string;
+}
+
+interface Manager extends Employee {
+  department: string;
+  numOfEmployees: number;
+  scheduleMeeting: (topic: string) => void;
+}
+```
+
+TypeScript Structural Type System
+
+This is possible because of TypeScript's structural type system. This is often referred as **DUCK TYPING**. If something walks like a duck, swims like a duck, quacks like a duck then it must be a duck.
+```ts
+interface Employee {
+  name: string;
+  title: string;
+}
+
+let developer = {
+  name: 'Bob',
+  title: 'TS Developer',
+  editor: 'VS Code'
+}
+
+let newEmployee: Employee = developer;
+```
+
 
