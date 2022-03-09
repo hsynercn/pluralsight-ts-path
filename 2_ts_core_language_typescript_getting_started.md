@@ -212,3 +212,14 @@ let fixedString2 = (value as number).toFixed(4);
 console.log(fixedString); //5.0000
 ```
 
+**Control Based Type Analysis**
+
+In this case type can only be string because of if block. So when we hover and check the type of messageElement we see only string type.
+
+```ts
+var messageElement = HTMLElement | string;
+if(typeof messageElement === 'string') {
+  return messageElement;
+}
+messageElement = document.getElementById('messages');
+```
