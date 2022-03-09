@@ -126,6 +126,7 @@ and this package.json when we run **"npm start"** we compile ts files and webpac
 - Managing null and undefined
 - Control flow-based type analysis
 
+**Basic Types and Variable Declarations**
 
 Basic TypeScript Types
 - Boolean
@@ -134,5 +135,80 @@ Basic TypeScript Types
 - Array
 - Enum
 
+Declarations with **let** and **const**
 
+This is a valid declaration in JavaScript, because of **hoisting** all var declarations are carried to top.
+```js
+console.log(myString);
+var myString = 'Hello';
+```
+
+This is the recommended way:
+
+```js
+let myString = 'Hello';
+const myValue = 2;
+```
+
+**Type Annotations and Type Inference**
+
+```ts
+let x: string = 'test string';
+x = 12; //Compiler error
+
+let y = 'test string';
+y = 12; //Compiler error
+
+let z = GetSomeVariable(); //OK
+let w: number = GetSomeVariable(); //OK, better
+```
+
+Be consistent in a project.
+
+**Additional Built-in Types**
+- Void: Represents absence of a type.
+- Null
+- Undefined
+- Never: Unusual type, for example an exception throwing never returning function.
+- Any: Use for bypass type checking, like using a 3rd party JS library.
+
+**Union Types and --strictNullChecks Compiler Option**
+
+Union Types
+
+```ts
+let someValue = number | string;
+someValue = 42; //OK
+someValue = 'Hello World';  //OK
+someValue = true; //NOT OK
+```
+
+If we set strictNullChecks true in compiler options.
+```ts
+let basicString: string;
+basicString = null; //compiler error
+basicString = undefined; //compiler error
+
+let nullableString = string | null;
+nullableString = null; //OK
+nullableString = undefined; //compiler error
+
+let mysteryString = string | null | undefined;
+mysteryString = null; //OK
+mysteryString = undefined;  //OK
+```
+
+**Type Assertions**
+
+"< type > variable" and "variable as type" have same functionality.
+
+```ts
+let value: any = 5;
+
+let fixedString: string = (<number>value).toFixed(4);
+console.log(fixedString); //5.0000
+
+let fixedString2 = (value as number).toFixed(4);
+console.log(fixedString); //5.0000
+```
 
