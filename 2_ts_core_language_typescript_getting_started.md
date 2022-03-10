@@ -521,3 +521,79 @@ export class Game {
 - Supporting multiple source files
 - Flexibility
 
+### 2.6. Creating and Consuming Modules
+
+TypeScript adapted ECMA Script 2015 module syntax.
+
+**Overview**
+- Why use modules
+- Support technologies
+- Import and export syntax
+- Module resolution
+
+**Why Use Modules?**
+- Encapsulation
+- Reusability
+- Create higher-level abstraction
+
+**Supporting Technologies**
+
+TypeScript Compiler>JavaScript Modules
+- AMD
+- CommonJS
+- UMD
+- System
+- ES2015
+
+Loader/Bundler
+- Node
+- RequireJS
+- SystemJS
+- Webpack
+
+**Exporting a Declaration**
+
+I can export objects with "export" keyword.
+```ts
+export interface Person {};
+export function hireDeveloper(): void {};
+export default class Employee {};
+class Manager {}; //not accessible outside the module
+```
+
+Another way:
+```ts
+interface Person {};
+function hireDeveloper(): void {};
+class Employee {};
+class Manager {}; //still not accessible outside the module
+export { Person, hireDeveloper, Employee as StafFMember }
+```
+
+**Importing from a Module**
+
+```ts
+import { Person, hideDeveloper } from './person';
+let human: Person;
+```
+
+We can import default export like this.
+```ts
+import Worker from './person';
+```
+
+We can import with a different name.
+```ts
+import { StaffMember as CoWoker } from './person';
+let emp: CoWorker = new CoWorker();
+```
+
+Import everything.
+```ts
+import * HR from './person';
+HR.hireDeveloper();
+```
+
+
+
+ 
