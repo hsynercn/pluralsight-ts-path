@@ -701,4 +701,9 @@ Available for thousands of libraries.
 **Searching for Type Declaration Files**
 
 https://www.typescriptlang.org/dt/search?search=axios we can use this page.
+
+**Summary**
+- Write code faster
+- Find errors faster
+- Provide value faster
  
