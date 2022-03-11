@@ -607,4 +607,72 @@ import * as $ from 'jquery';
 import * as lodash from 'lodash';
 ```
 
+**Module Resolution Examples**
+
+Resolving **Classic** Relative Imports
+
+This import will look for these files:
+- /Source/MultiMath/person.ts
+- /Source/MultiMath/person.d.ts
+```ts
+//File: /Source/MultiMath/player.ts
+import { Developer } from './person';
+```
+
+Resolving **Classic** Non-relative Imports
+
+This import will look for these files:
+- /Source/MultiMath/person.ts
+- /Source/MultiMath/person.d.ts
+- /Source/person.ts
+- /Source/person.d.ts
+(continue searching up the directory tree)
+```ts
+//File: /Source/MultiMath/player.ts
+import { Developer } from 'person';
+```
+
+Resolving **Node** Relative Imports
+
+This import will look for:
+- /Source/MultiMath/person.ts
+- /Source/MultiMath/person.tsx
+- /Source/MultiMath/person.d.ts
+- /Source/MultiMath/person/package.json (with "types" property)
+- /Source/MultiMath/index.ts
+- /Source/MultiMath/index.tsx
+- /Source/MultiMath/index.d.ts
+```ts
+//File: /Source/MultiMath/player.ts
+import { Developer } from './person';
+```
+
+Resolving **Node** Non-relative Imports
+
+This import will look for:
+- /Source/MultiMath/node_modules/person.ts (person.tsx, person.d.ts)
+- /Source/MultiMath/node_modules/person/package.json (with "types" property)
+- /Source/MultiMath/node_modules/@types/person.d.ts
+- /Source/MultiMath/node_modules/person/index.ts (index.tsc, index.d.ts)
+- /Source/node_modules/person.ts (person.tsx, person.d.ts)
+- /Source/node_modules/person/package.json (with "types" properties)
+- /Source/node_modules/@types/person.d.ts
+- /Source/node_modules/person/index.ts (index.tsx, index.d.ts)
+
+```ts
+//File: /Source/MultiMath/player.ts
+import { Developer } from 'person';
+```
+
+**Summary**
+- Modules provide higher-level abstractions
+- Simple syntax
+- Flexible usage
+- Configurable resolution strategies
+
+### 2.7. Begin Mode Productive with Type Declaration Files
+
+
+
+
  
