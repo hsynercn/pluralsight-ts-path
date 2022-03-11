@@ -672,7 +672,33 @@ import { Developer } from 'person';
 
 ### 2.7. Begin Mode Productive with Type Declaration Files
 
+Type declaration files
+- What are they?
+- Where do I get them?
+- Hos do I use them?
 
+Type declaration, type definition or type libraries: TypeScript wrapper for JavaScript libraries.
+- Types for variables, functions, etc.
+- Define valid property names
+- Define function parameters
 
+They are just development-time tool to assist compiler.
 
+Filenames end with .d.ts.
+
+Available for thousands of libraries.
+
+**DefinitelyTyped**
+- Github repository containing thousands of type declaration files.
+- Declaration files often maintained independent of related JavaScript library
+- Source for installation utilities
+
+**Installing Type Declaration Files**
+- Installed with npm
+- Packages installed from @types/\<name\>
+- Sourced from the DefinitelyTyped repo
+
+**Searching for Type Declaration Files**
+
+https://www.typescriptlang.org/dt/search?search=axios we can use this page.
  
