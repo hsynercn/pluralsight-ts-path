@@ -50,3 +50,43 @@ const functionObj = new FunctionObject();
 const objCreate = Object.create(objLiteral);
 ```
 
+**Object-oriented Concepts**
+
+Object-oriented Programming (OOP): Programs are composed of objects which communicate with each other, which may be arranged into hierarchies, and which can be combined to form additional objects.
+
+
+- Code reuse
+- Faster development time frames
+- Real-world mapping of objects
+- Modular architecture
+- More maintainable code base
+
+Principles of Object-oriented Programming
+- Abstraction
+- Encapsulation
+- Inheritance
+- Polymorphism
+
+
+**Abstraction**
+- Abstract complex functionality into an object that can be used as the base for other objects.
+
+**Encapsulation**
+- Objects provide public access points that can be used to interact with private members.
+
+**Inheritance**
+- Objects can share functionality from existing objects and create a family hierarchy.
+
+**Polymorphism**
+- Objects exhibit the same behavior but in a different way.
+
+Summary
+- JS/TS provides several ways to create objects
+- JS is a type of object-oriented language based on prototype-based inheritance
+- Key object-oriented concepts:
+    - Abstraction
+    - Encapsulation
+    - Inheritance
+    - Polymorphism
+
+
