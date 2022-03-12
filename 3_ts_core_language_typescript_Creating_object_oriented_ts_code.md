@@ -12,3 +12,41 @@ Object-oriented principles.
 - Classes and Interfaces
 - Summary
 
+**The Role of Objects**
+- Store state
+- Pass state
+- Group related functions
+- Model real-world objects
+
+ **Object Creation Techniques**
+ - Constructor Function
+ - Object Literal
+ - Object.create()
+ - Class (ES2015)
+
+Go to /pluralsight-ts-path/course-projects/3_creating_object_oriented_ts_code/examples/object-oriented run "npm run webpack:w" in one terminal and "npm start" in another.
+
+```ts
+//object creation methods
+
+//object literal
+const objLiteral = {
+    balance: 500
+};
+
+//class
+class ClassObject {
+    balance = 1000;
+}
+const classObj = new ClassObject();
+
+//function
+function FunctionObject() {
+    this.balance = 9000;
+}
+const functionObj = new FunctionObject();
+
+//Object.create()
+const objCreate = Object.create(objLiteral);
+```
+
