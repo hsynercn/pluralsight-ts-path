@@ -242,3 +242,162 @@ Overview
 - Override members
 
 **The Role of Inheritance**
+
+Reusing Code: Inheritance provides a way to reuse code across class in a family hierarchy.
+
+**Inheriting from a Class**
+- Classes can inherit/derive functionality from other classes.
+- Use the extends keyword.
+- A class can inherit from one class.
+
+```ts
+class BankAccount {
+    constructor(id: number) {
+
+    }
+}
+class CheckingAccount extends BankAccount {
+    constructor(id: number) {
+        super(id); //required
+    }
+}
+```
+
+If a base class has a constructor, and a child class has a constructor, the child class must make a call to super() (which is the base class).
+
+```ts
+export abstract class BankAccount {
+    private _balance = 0;
+    id: number;
+    title: string;
+    abstract accountType: AccountType;
+
+    constructor(accountSettings: any) {
+        this.id = accountSettings.id;
+        this.title = accountSettings.title;
+        this.balance = accountSettings.balance;
+    }
+
+    deposit(amount: number) {
+        this.balance += amount;
+    }
+
+    withdrawal(amount: number) {
+        this.balance -= amount;
+    }
+
+    abstract getAccountInfo(): any;
+
+    get balance() {
+        return this._balance;
+    }
+
+    set balance(val: number) {
+        if (val >= 0) {
+            this._balance = val;
+        }
+        else {
+            throw Error('Balance cannot be negative!');
+        }
+    }
+
+}
+
+export class CheckingAccount extends BankAccount {
+    accountType = AccountType.Checking;  
+
+    getAccountInfo() {
+        return {
+
+        };
+    }
+}
+//we are using BankAccount constructor for thus class
+let checkingAccount: CheckingAccount = new CheckingAccount({
+    id: 1,
+    title: 'Jane Doe Checking',
+    balance: 5000
+});
+```
+
+We can extend another class from bank account. If we have a constructor in child class, we need to call super constructor.
+
+```ts
+export class SavingsAccount extends BankAccount {
+    private _interestRate: number;
+    accountType = AccountType.Savings;
+
+    constructor(accountSettings: any) {
+        super(accountSettings);
+        this._interestRate = accountSettings.interestRate;
+
+        // Simulate interest over time
+        setInterval(() => {
+            this.addInterest();
+        }, 60000);
+    }
+
+    getAccountInfo() {
+        return {
+
+        };
+    }
+
+    deposit(amount: number) {
+        let newAmount = amount + (amount * (this._interestRate / 100));
+        this.balance += newAmount;
+    }
+
+    private addInterest() {
+        this.balance = this.balance + (this.balance * (this._interestRate / 100));
+    }
+}
+```
+
+**The Role of Abstract Classes**
+
+**Abstraction:** Abstract complex functionality into an object that can be used as the base for other objects.
+
+Why do I need an abstract class?
+
+Why not just use a regular concrete class and go with that?
+
+For our case abstract class is the right tool, we don't need a concrete class we just want to abstract functionality.
+
+**Creating and Inheriting from an Abstract Class**
+- An abstract class can be used as a foundation for other classes.
+- Can define concrete members as well as abstract members.
+
+```ts
+abstract class BankAccount {
+   //Abstract member (must be implemented by child)
+   abstract accountType: AccountType;
+
+   //Concrete member
+   deposit() {
+   }
+}
+```
+Check previous code sample for abstract filed usage.
+
+**Overriding Members**
+- BankAccount: deposit
+- SavingsAccount: deposit
+
+SavingsAccount uses it's own method. Overrides parent method.
+
+**Summary**
+- Inheritance provides a way to promote reuse across objects in an application
+- Use the extends keyword for inheritance
+- Call super() in a child class constructor when the base/parent class has a constructor
+- Abstract classes "abstract" functionality and serve as the foundation for other classes
+- Create abstract classes and members by using the abstract keyword
+
+### 3.5. Interfaces and Polymorphism
+
+**Intro**
+
+
+
+
+
