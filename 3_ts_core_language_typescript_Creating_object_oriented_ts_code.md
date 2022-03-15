@@ -411,3 +411,40 @@ class ATM implements DepositWithdrawal {
 }
 ```
 
+**Polymorphism:** Objects exhibit same behavior but in a different way.
+
+Using Interfaces as Types: Interfaces can be used as types to define the "shape" of data held in a property or that is passed to function/method or constructor.
+
+```ts
+interface AccountInfo {
+    routingNumber: number;
+    bankNumber: number;
+}
+//accountInfo: AccountInfo;
+```
+
+**Summary**
+- Interfaces are code contracts
+- Key benefits of using interfaces include:
+    - Drive consistency across multiple objects
+    - Define the "shape" of data passes to constructor or function/method
+    - Use as a custom data type
+- Classes can implement an interface by using the implements keyword
+- Abstract classes and interfaces can both be used to achieve polymorphic behavior
+
+
+### 3.6. Putting It All Together
+
+**Object Creation Techniques**
+- Constructor Function
+- Object Literal
+- Object.create()
+- Class
+
+**Principles of Object-oriented Programming**
+- Abstraction
+- Encapsulation
+- Inheritance
+- Polymorphism
+
+Pick the right tool for right job.
