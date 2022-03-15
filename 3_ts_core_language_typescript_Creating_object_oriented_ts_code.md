@@ -411,6 +411,3 @@ class ATM implements DepositWithdrawal {
 }
 ```
 
-git config --global user.email "huscanercan@gmail.com"
-git config --global user.name "Huseyin Can Ercan"
-
