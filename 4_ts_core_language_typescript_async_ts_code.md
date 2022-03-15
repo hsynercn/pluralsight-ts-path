@@ -21,11 +21,13 @@ In this example we execute setTimeout function block asynchronously.
 ```
 
 **Tooling**
-- Install nodejs.
+- Install nodejs
     - node --version
     - npm --version
 - VS Code
     - Prettier
     - ESLint
+
+### 4.2. Identify When to Write Asynchronous Code
 
 
