@@ -397,7 +397,20 @@ SavingsAccount uses it's own method. Overrides parent method.
 
 **Intro**
 
+We can use interface to provide consistency between two unrelated object. A BankAccount and ATM class can implement same interface.
 
+Classes can implement interfaces using the TypeScript implements keyword.
+```ts
+interface DepositWithdrawal {
+    deposit(amount: number) {}
+    withdrawal(amount: number) {}
+}
+class ATM implements DepositWithdrawal {
+    deposit(amount: number) {}
+    withdrawal(amount: number) {}
+}
+```
 
-
+git config --global user.email "huscanercan@gmail.com"
+git config --global user.name "Huseyin Can Ercan"
 
