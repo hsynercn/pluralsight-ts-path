@@ -3,18 +3,18 @@
 ## Tech Stack
 hsynercn/pluralsight-ts-path is built on the following main stack:
 
-- [jQuery](http://jquery.com/) – Javascript UI Libraries
-- [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [TypeScript](http://www.typescriptlang.org) – Languages
+- [Bulma](http://bulma.io/) – Front-End Frameworks
+- [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
+- [css-loader](https://github.com/webpack-contrib/css-loader) – CSS Pre-processors / Extensions
+- [jQuery](http://jquery.com/) – Javascript UI Libraries
+- [ESLint](http://eslint.org/) – Code Review
+- [Prettier](https://prettier.io/) – Code Review
+- [TSLint](https://github.com/palantir/tslint) – Code Review
 - [Webpack](http://webpack.js.org) – JS Build Tools / JS Task Runners
 - [Lodash](https://lodash.com) – Javascript Utilities & Libraries
-- [ESLint](http://eslint.org/) – Code Review
-- [Bulma](http://bulma.io/) – Front-End Frameworks
 - [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
-- [TSLint](https://github.com/palantir/tslint) – Code Review
-- [Prettier](https://prettier.io/) – Code Review
-- [css-loader](https://github.com/webpack-contrib/css-loader) – CSS Pre-processors / Extensions
 
 Full tech stack [here](/techstack.md)
 
@@ -24,18 +24,18 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 hsynercn/pluralsight-ts-path is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/1171/jCR2zNJV.png' alt='Sass'/> [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/5204/bulma-logo.png' alt='Bulma'/> [Bulma](http://bulma.io/) – Front-End Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/1171/jCR2zNJV.png' alt='Sass'/> [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/8074/default_d2b16fd6997fb2e164de645a34f9b8d5a880d999.png' alt='css-loader'/> [css-loader](https://github.com/webpack-contrib/css-loader) – CSS Pre-processors / Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
+- <img width='25' height='25' src='https://img.stackshare.io/service/5561/303157.png' alt='TSLint'/> [TSLint](https://github.com/palantir/tslint) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/1682/IMG_4636.PNG' alt='Webpack'/> [Webpack](http://webpack.js.org) – JS Build Tools / JS Task Runners
 - <img width='25' height='25' src='https://img.stackshare.io/service/2438/lodash.png' alt='Lodash'/> [Lodash](https://lodash.com) – Javascript Utilities & Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/5204/bulma-logo.png' alt='Bulma'/> [Bulma](http://bulma.io/) – Front-End Frameworks
 - <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/5561/303157.png' alt='TSLint'/> [TSLint](https://github.com/palantir/tslint) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/8074/default_d2b16fd6997fb2e164de645a34f9b8d5a880d999.png' alt='css-loader'/> [css-loader](https://github.com/webpack-contrib/css-loader) – CSS Pre-processors / Extensions
 
 Full tech stack [here](/techstack.md)
 
@@ -46,7 +46,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [hsynercn/pluralsight-ts-path](https://github.com/hsynercn/pluralsight-ts-path)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|37<br/>Tools used|01/31/24 <br/>Report generated|
+|37<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
